@@ -4,7 +4,7 @@ class Nft_Login_Util
 {
 
     const ETHEREUM_CHAIN_ID = '0x1';
-    const POLYGON_CHAIN_ID = '0x89';
+    const POLYGON_CHAIN_ID = '0x44';
 
     public function __construct()
     {
@@ -15,7 +15,7 @@ class Nft_Login_Util
         if ($chain_id == Nft_Login_Util::ETHEREUM_CHAIN_ID) {
             return 'Ethereum';
         } else if ($chain_id == Nft_Login_Util::POLYGON_CHAIN_ID) {
-            return 'Polygon';
+            return 'CRAB';
         }
     }
 
@@ -23,7 +23,7 @@ class Nft_Login_Util
         if ($chain_id == Nft_Login_Util::ETHEREUM_CHAIN_ID) {
             return 'https://etherscan.io/token/';
         } else if ($chain_id == Nft_Login_Util::POLYGON_CHAIN_ID) {
-            return 'https://polygonscan.com/token/';
+            return 'https://crab.subscan.io/account/';
         }
     }
 
@@ -32,7 +32,7 @@ class Nft_Login_Util
         if ($chain_id == Nft_Login_Util::ETHEREUM_CHAIN_ID) {
             $node = 'https://cloudflare-eth.com';
         } else if ($chain_id == Nft_Login_Util::POLYGON_CHAIN_ID) {
-            $node = 'https://polygon-rpc.com';
+            $node = 'https://crab-rpc.darwinia.network';
         }
 
         $response = wp_remote_post($node, array(
